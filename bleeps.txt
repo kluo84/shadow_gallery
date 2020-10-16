@@ -16,6 +16,21 @@ On Kali:
 On Attacker-Windows system:
 	Open RDP and RDP w/ valid victim credentials to the IP of your Kali system
 	Done!
+	
+** Ettercap ** 
+Step 1: arp -n #checking the current ARP table and confirm MAC address
+Step 2: echo 1 > /proc/sys/net/ipv4/ip_forward # enable IP Forwarding
+Step 3: Uncommend the Linux section in /etc/ettercap/etter.conf for iptables
+Step 4: run ettercap -G (for gui) or try the following command lines:
+	- ettercap -T -q -M arp:remote /target1(gateway)// /target2//
+	- Press h to go to option
+	- Press s for statistics
+	- press c for connection list
+	- Press l for host list
+Step 5: Proper shutdown ettercap: Select Mitm > Stop mitm attack and Start -> Stop Sniffing. Then quit
+
+#Should never issue a SIGKILL message to Ettercap (for example, killall -9 ettercap, kill -p `pidof ettercap`. Press q to quit ettercap.
+
 
 **Nmap**
 --------------------
