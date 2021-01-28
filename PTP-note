@@ -1,0 +1,10 @@
+Python 3.8.1 required
+- python3 ptp.py dev -> no HTTP
+- use the "dev" version, dev-web and dev-db (docker)
+- Need to "pause" and "resume". When done, use remove command.
+- docker
+localhost:8080/admin/ : admin portal -> need add users
+--Select the report to HVA (change the type in database first before generate the report)
+----------------------------------------------------------------
+Add engagement data
+
