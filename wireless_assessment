@@ -14,7 +14,9 @@ Pick 6
 
 Got the handshake, Upload and convert a WPA / WPA2 pcap capture file to a hashcat capture fil
 
-https://hashcat.net/cap2hccapx/
+Online at https://hashcat.net/cap2hccapx/
+or binary https://github.com/hashcat/hashcat-utils/releases 
+#./cap2hccapx.bin /home/kali/handshake-08\:10\:79\:E9\:D7\:4E.cap #SSID
 
 then use hashcat
 hashcat64.exe -m 2500 27372_1613440944.hccapx D:\Shared\SecLists\fav_wordlist\fav_wordlist.txt
